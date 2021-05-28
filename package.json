@@ -1,0 +1,22 @@
+{
+  "name": "electron-template",
+  "version": "1.0.0",
+  "description": "electron js preconfigured for easy to use",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arunk28/electron.git"
+  },
+  "author": "Arun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arunk28/electron/issues"
+  },
+  "homepage": "https://github.com/Arunk28/electron#readme",
+  "dependencies": {
+    "electron": "^13.0.1"
+  }
+}
