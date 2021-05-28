@@ -1,23 +1,23 @@
 <html>
   <head></head>
   <body>
-    <form>
-      <div>
+    <div>
+      <form>
         <label>add window</label>
-        <input type="input" autofocus placeholder="add item" id="item" />
-      </div>
-      <button type="submit">add item</button>
-    </form>
+        <input type="input" autofocus id="item" />
+
+        <button type="submit">add item</button>
+      </form>
+    </div>
 
     <script>
       const electron = require("electron");
       const { ipcRenderer } = electron;
 
-      const form = document.querySelector("form");
-      form.addEventListener("submit", submitForm);
+      document.querySelector("form").addEventListener("submit", submitForm);
 
       function submitForm(e) {
-        e.preventdefault();
+        e.preventDefault();
         const item = document.querySelector("#item").value;
         ipcRenderer.send("item:add", item);
       }

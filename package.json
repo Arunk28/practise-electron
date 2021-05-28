@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Arunk28/electron#readme",
   "dependencies": {
-    "electron": "^13.0.1"
+    "electron": "^1.7.6"
   }
 }

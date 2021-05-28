@@ -54,10 +54,10 @@ addWindow.on('close',function(){
 }
 
 ipcMain.on('item:add',function(e,item){
-    console.log(item);
 mainWindow.webContents.send('item:add',item);
 addWindow.close();
-})
+});
+
 const menutemplate = [{
     label : "file",
     submenu :[{
@@ -70,4 +70,13 @@ const menutemplate = [{
             app.quit();
         }
     }]
-}]
+},{
+    label:'Developer Tools',
+    submenu :[{
+        label:'Toogle Tools',
+        click(item,focusedWindow){
+            focusedWindow.toggleDevTools();
+        }
+    }]
+}
+]
