@@ -3,7 +3,7 @@ const url = require('url');
 const path = require('path');
 const { Menu } = require('electron');
 
-const {app,BrowserWindow}  = electron;
+const {app,BrowserWindow,ipcMain}  = electron;
 
 let mainWindow ;
 let addWindow;
@@ -53,6 +53,11 @@ addWindow.on('close',function(){
 
 }
 
+ipcMain.on('item:add',function(e,item){
+    console.log(item);
+mainWindow.webContents.send('item:add',item);
+addWindow.close();
+})
 const menutemplate = [{
     label : "file",
     submenu :[{
