@@ -47,7 +47,7 @@ addWindow.loadURL(url.format({
     slashes : true
 }));
 
-addWindow.on('close',function()}{
+addWindow.on('close',function(){
     addWindow = null;
 })
 
